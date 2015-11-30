@@ -4,7 +4,7 @@ node[:deploy].each do |app_name, deploy|
 		source "dbconfig.php.erb"
 		mode 0664
 		group deploy[:group]
-		owner "www-data"
+		owner "apache"
 		
 		## Get the environment_variables from the OpsWorks console 
 		## and copy them into the variables to be passed to the template in ../templates/default/
